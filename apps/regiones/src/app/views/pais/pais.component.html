@@ -1,0 +1,21 @@
+<div class="container mt-5">
+  <div class="col-12 card" *ngIf="pais$ | async as paisData; else cargadotemplate">
+    <div class="card-body">
+      <h5 class="card-title">{{ paisData.name }} - {{ paisData.iso2Code }}</h5>
+      <p class="card-text">
+        <span i18n>Capital: </span><span>{{paisData.capitalCity}}</span>
+      </p>
+      <p class="card-text">
+        <span i18n>Latitude:</span><span> {{paisData.latitude}}</span>
+      </p>
+      <p class="card-text">
+        <span i18n>Length:</span><span> {{paisData.longitude}}</span>
+      </p>
+      <p class="card-text">
+         <span i18n>Region:</span><span> {{paisData.region.value}}</span>
+      </p>
+      <button type="button" class="btn btn-primary ml-2" [routerLink]="['/region', paisData.region.id]" i18n>Go to the Region</button>
+    </div>
+  </div>
+  <ng-template #cargadotemplate i18n>Renewing API data ...</ng-template>
+</div>

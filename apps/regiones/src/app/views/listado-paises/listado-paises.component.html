@@ -1,0 +1,10 @@
+<h1 class="text-center" i18n>List of Countries</h1>
+<div class="row m-0" >
+  <div class="col-2">
+    <button class="btn btn-primary ml-2" [routerLink]="['/index']"  i18n>start</button>
+  </div>
+</div>
+<div class="container">
+  <regiones-ui-items-list [itemListConfig] = "itemListConfig$" (butonAEmmitter)="goToPais($event)"></regiones-ui-items-list>
+</div>
+

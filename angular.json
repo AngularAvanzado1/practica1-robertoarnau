@@ -1,0 +1,188 @@
+{
+  "version": 1,
+  "projects": {
+    "regiones": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/regiones",
+      "sourceRoot": "apps/regiones/src",
+      "prefix": "angular-banco-mundial",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/regiones",
+            "index": "apps/regiones/src/index.html",
+            "main": "apps/regiones/src/main.ts",
+            "polyfills": "apps/regiones/src/polyfills.ts",
+            "tsConfig": "apps/regiones/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "apps/regiones/src/favicon.ico",
+              "apps/regiones/src/assets",
+              "apps/regiones/src/manifest.webmanifest"
+            ],
+            "styles": ["apps/regiones/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/regiones/src/environments/environment.ts",
+                  "with": "apps/regiones/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ],
+              "serviceWorker": true,
+              "ngswConfigPath": "apps/regiones/ngsw-config.json"
+            },
+            "production-es": {
+              "fileReplacements": [
+                {
+                "replace": "apps/regiones/src/environments/environment.ts",
+                "with": "apps/regiones/src/environments/environment.prod.es.ts"
+                }
+              ],
+              "outputPath": "dist/apps/regiones/es/",
+              "i18nFile": "apps/regiones/src/locale/messages.es.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "es",
+              "baseHref": "es"
+             }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "regiones:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "regiones:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "regiones:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/regiones/tsconfig.app.json",
+              "apps/regiones/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/regiones/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/regiones/jest.config.js",
+            "tsConfig": "apps/regiones/tsconfig.spec.json",
+            "setupFile": "apps/regiones/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "regiones-e2e": {
+      "root": "apps/regiones-e2e",
+      "sourceRoot": "apps/regiones-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/regiones-e2e/cypress.json",
+            "tsConfig": "apps/regiones-e2e/tsconfig.e2e.json",
+            "devServerTarget": "regiones:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "regiones:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/regiones-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/regiones-e2e/**"]
+          }
+        }
+      }
+    },
+    "shared-ui": {
+      "projectType": "library",
+      "root": "libs/shared/ui",
+      "sourceRoot": "libs/shared/ui/src",
+      "prefix": "regiones-ui",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared/ui/tsconfig.lib.json",
+              "libs/shared/ui/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/shared/ui/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/ui/jest.config.js",
+            "tsConfig": "libs/shared/ui/tsconfig.spec.json",
+            "setupFile": "libs/shared/ui/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "schematics": {
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
+    }
+  },
+  "defaultProject": "regiones"
+}

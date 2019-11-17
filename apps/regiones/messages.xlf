@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="es" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="29e87aa91f2373a3cc959753e035c1cd74e17a5b" datatype="html">
+        <source>Regiones geográficas continentales</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c2d7610c46c68fd3b05725026ab5e0ab179bb268" datatype="html">
+        <source>© Proyectos escalables con Angular 2019.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7e464351723c83521168112e90eed6c3cd6e1475" datatype="html">
+        <source>Listado de Regiones</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/index/index.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5a605542ce60c66d69ecb65e05f2017f0d97399e" datatype="html">
+        <source>Listado de regiones</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/region/region.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="917b3295536b2fa041dcf837d5c00bd754434c69" datatype="html">
+        <source>Cangando datos de la API ...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/region/region.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/pais/pais.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6cb224e985c22f6b85c930bc1f2aed8c562d3791" datatype="html">
+        <source>Listado de Paises</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/listado-paises/listado-paises.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="45a4b797ab6931fb10ed4ad33c49a77582db3db8" datatype="html">
+        <source>Inicio</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/listado-paises/listado-paises.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="203fd0884e9b4c232cd101e8a67d727da83bc48c" datatype="html">
+        <source>Capital: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/pais/pais.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7f42d3ed7da3c01556776a80782faaa09b1b908f" datatype="html">
+        <source>Latitud:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/pais/pais.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="45dcf1ba4a791998b33f7834e4e79a2fc981dd18" datatype="html">
+        <source>Longitud:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/pais/pais.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="55013fb9e00963dbf17f8572ee27607cb89178f7" datatype="html">
+        <source>Región:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/pais/pais.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="328e077b81429cd456947e4cb8aba09bd29285ed" datatype="html">
+        <source>Ir a la Región</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/pais/pais.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

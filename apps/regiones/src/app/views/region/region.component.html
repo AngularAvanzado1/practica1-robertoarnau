@@ -1,0 +1,12 @@
+<div class="container mt-5">
+
+  <div class="col-12 card" *ngIf="region$ | async as regionData; else cargadotemplate">
+    <div class="card-body">
+      <h5 class="card-title">{{ regionData.name }}</h5>
+      <p class="card-text">{{regionData.code}} - {{regionData.iso2code}}</p>
+      <button type="button" class="btn btn-secondary" (click)="goToListadoRegiones()" i18n>Regions List</button>
+      <button type="button" class="btn btn-primary ml-2" [routerLink]="['/paises', regionData.code]" >Countries of {{ regionData.name }}</button>
+    </div>
+  </div>
+  <ng-template #cargadotemplate i18n>Renewing API data ...</ng-template>
+</div>

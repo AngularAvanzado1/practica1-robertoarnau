@@ -1,0 +1,7 @@
+<div *ngFor="let item of itemList" class="col-2 card">
+  <div class="card-body">
+    <h5 class="card-title">{{ item.name }}</h5>
+    <p class="card-text">{{ item.description }}</p>
+    <button type="button" class="btn btn-primary" (click)="butonAEmit(item.id)">Ver</button>
+  </div>
+</div>

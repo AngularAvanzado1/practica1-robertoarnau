@@ -1,0 +1,21 @@
+{
+  "npmScope": "angular-banco-mundial",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "regiones-e2e": {
+      "tags": []
+    },
+    "regiones": {
+      "tags": []
+    },
+    "shared-ui": {
+      "tags": []
+    }
+  }
+}
